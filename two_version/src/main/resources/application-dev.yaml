@@ -1,0 +1,6 @@
+names: test
+server:
+  port: 8089
+# 根据环境确认是否暴露swagger
+swagger:
+ enable: true
