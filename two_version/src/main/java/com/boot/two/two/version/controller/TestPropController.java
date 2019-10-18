@@ -96,7 +96,9 @@ public class TestPropController {
     @ApiOperation(value = "ListPropConfPrefix", notes = "获取ListPropConfPrefix值", httpMethod = "GET")
     @GetMapping("/ListPropConfPrefix")
     public void getListPropConfPrefix() {
-        listPropConfPrefix.getHost();
+        listPropConfPrefix.getHost().stream().forEach(s -> {
+            System.out.println(s);
+        });
     }
 
 }

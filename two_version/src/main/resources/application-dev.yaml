@@ -1,9 +1,17 @@
 server:
   port: 8082
+  undertow:
+    io-threads: 4
+    worker-threads:
+    buffer-size: 1024
+    #   是否分配的直接内存
+    direct-buffers: true
+
+
+
 # 根据环境确认是否暴露swagger
 swagger:
- enable: true
-
+  enable: true
 
 configcomvalue: ConfigComValue
 
@@ -16,3 +24,12 @@ randomString: ${myValue}
 # servers:
 #  -dev.example.com
 #  -another.example.com
+spring:
+#spring-task start
+  task:
+    execution:
+      pool:
+        max-size: 16
+        queue-capacity: 10
+        keep-alive: 10s
+#spring-task end

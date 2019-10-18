@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * 若是数据源 则只设置getter方法
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.PropertySource;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//@Validated
 public class PropConfPrefix {
     private String url;
     private String driver;
