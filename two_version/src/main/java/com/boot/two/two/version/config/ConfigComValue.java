@@ -15,17 +15,16 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class Mybean {
+public class ConfigComValue {
 
-
-    @Value("${names}")
-    private  String name;
+    //采用${}获取配置文件中的字段
+    @Value("${configcomvalue}")
+    private  String configcomvalue;
 
 
     public  String test(){
-        System.out.println(name+"11");
-        return name;
+        System.out.println(configcomvalue+"11");
+        return configcomvalue;
     }
-
 
 }

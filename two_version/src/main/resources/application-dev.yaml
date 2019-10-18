@@ -1,6 +1,18 @@
-names: test
 server:
-  port: 8089
+  port: 8082
 # 根据环境确认是否暴露swagger
 swagger:
  enable: true
+
+
+configcomvalue: ConfigComValue
+
+randomValue: ${random.int}
+
+myValue: wahaha
+randomString: ${myValue}
+
+#my:
+# servers:
+#  -dev.example.com
+#  -another.example.com
