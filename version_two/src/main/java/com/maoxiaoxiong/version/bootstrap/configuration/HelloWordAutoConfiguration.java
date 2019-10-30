@@ -1,6 +1,7 @@
 package com.maoxiaoxiong.version.bootstrap.configuration;
 
 import com.maoxiaoxiong.version.bootstrap.annotation.EnableHelloWord;
+import com.maoxiaoxiong.version.bootstrap.conditional.ConditionOnSystemProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,11 +16,13 @@ import org.springframework.context.annotation.Configuration;
  * @ClassName HelloWordConfiguration
  */
 
-//@Configuration
-public class HelloWordConfiguration {
+@Configuration
+@EnableHelloWord
+@ConditionOnSystemProperty(name = "user.name", value = "wangzhixiong")
+public class HelloWordAutoConfiguration {
 
-    @Bean
-    public String helloWord() {
-        return "hello";
-    }
+//    @Bean
+//    public String helloWord() {
+//        return "hello";
+//    }
 }

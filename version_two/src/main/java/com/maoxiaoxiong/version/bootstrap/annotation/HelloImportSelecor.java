@@ -1,5 +1,6 @@
 package com.maoxiaoxiong.version.bootstrap.annotation;
 
+import com.maoxiaoxiong.version.bootstrap.configuration.HelloWordAutoConfiguration;
 import com.maoxiaoxiong.version.bootstrap.configuration.HelloWordConfiguration;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
