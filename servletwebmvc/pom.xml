@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.boot.viewer</groupId>
-    <artifactId>view_boot</artifactId>
+    <artifactId>web_mvc_servlet</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>view_boot</name>
+    <name>web_mvc_servlet</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
