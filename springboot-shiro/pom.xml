@@ -109,6 +109,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 加入以下部分-->
+                <configuration>
+                    <mainClass>com.cat.little.Application</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
