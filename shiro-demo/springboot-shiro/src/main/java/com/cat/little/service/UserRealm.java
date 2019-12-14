@@ -1,6 +1,6 @@
 package com.cat.little.service;
 
-import com.cat.little.domain.User;
+import com.cat.little.model.User;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;

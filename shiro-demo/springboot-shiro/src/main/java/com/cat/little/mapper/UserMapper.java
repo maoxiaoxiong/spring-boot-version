@@ -1,6 +1,6 @@
 package com.cat.little.mapper;
 
-import com.cat.little.domain.User;
+import com.cat.little.model.User;
 
 public interface UserMapper {
 

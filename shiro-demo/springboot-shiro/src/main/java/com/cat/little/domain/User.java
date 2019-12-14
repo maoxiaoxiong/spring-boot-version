@@ -1,4 +1,4 @@
-package com.cat.little.domain;
+package com.cat.little.model;
 
 public class User {
     private Integer id;

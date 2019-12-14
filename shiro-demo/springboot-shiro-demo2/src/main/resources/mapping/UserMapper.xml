@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件存放CRUD的sql语句 -->
+<mapper namespace="com.cat.little.mapper.UserMapper">
+
+    <resultMap id="userMap" type="com.cat.little.model.User">
+        <id property="uid" column="uid"></id>
+        <result property="userName" column="uname"></result>
+        <result property="upassword" column="upassword"></result>
+        <collection property="uroles" ofType="com.cat.little.model.Role">
+            <id property="rid" column="rid"></id>
+            <result property="rname" column="rname"></result>
+            <collection property="rermissions" ofType="com.cat.little.model.Permission">
+                <id property="pid" column="pid"></id>
+                <result property="pname" column="pname"></result>
+                <result property="purl" column="purl"></result>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="findByUserName" parameterType="string" resultMap="userMap">
+    	SELECT 	*
+    		FROM
+    		user u
+    		inner join user_role ur on ur.uid = u.uid
+    		inner join role r on r.rid = ur.rid
+    		inner join permission_role pr on pr.rid=r.rid
+    		inner join permission p on pr.pid=p.pid
+    		where u.uname = #{userName}
+    	</select>
+
+
+    <!--    <select id="findByUserName" parameterType="string" resultType="com.cat.little.model.User">-->
+    <!--	SELECT 	id,-->
+    <!--		NAME,-->
+    <!--		PASSWORD-->
+    <!--		FROM-->
+    <!--		user where name = #{value}-->
+    <!--	</select>-->
+
+    <!--	<select id="findById" parameterType="int" resultType="user">-->
+    <!--	SELECT 	id,-->
+    <!--		NAME,-->
+    <!--		PASSWORD,-->
+    <!--		perms-->
+    <!--		FROM-->
+    <!--		user where id = #{value}-->
+    <!--	</select>-->
+</mapper>
