@@ -10,6 +10,15 @@
 		NAME,
 		PASSWORD
 		FROM
-		user where name = #{name}
+		user where name = #{value}
+	</select>
+
+	<select id="findById" parameterType="int" resultType="user">
+	SELECT 	id,
+		NAME,
+		PASSWORD,
+		perms
+		FROM
+		user where id = #{value}
 	</select>
 </mapper>
