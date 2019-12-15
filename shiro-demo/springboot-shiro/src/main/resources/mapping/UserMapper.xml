@@ -10,7 +10,7 @@
 		NAME,
 		PASSWORD
 		FROM
-		user where name = #{value}
+		users where name = #{value}
 	</select>
 
 	<select id="findById" parameterType="int" resultType="user">
@@ -19,6 +19,6 @@
 		PASSWORD,
 		perms
 		FROM
-		user where id = #{value}
+		users where id = #{value}
 	</select>
 </mapper>
