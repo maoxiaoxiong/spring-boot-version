@@ -103,6 +103,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring‐boot‐maven‐plugin</artifactId>
+                <version>2.2.0.RELEASE</version>
                 <!-- 加入以下部分-->
                 <configuration>
                     <mainClass>com.cat.little.Application</mainClass>
