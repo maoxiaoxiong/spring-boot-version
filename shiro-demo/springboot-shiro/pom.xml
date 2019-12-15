@@ -100,14 +100,14 @@
         </resources>
         <finalName>shiro</finalName>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring‐boot‐maven‐plugin</artifactId>-->
-<!--                &lt;!&ndash; 加入以下部分&ndash;&gt;-->
-<!--                <configuration>-->
-<!--                    <mainClass>com.cat.little.Application</mainClass>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring‐boot‐maven‐plugin</artifactId>
+                <!-- 加入以下部分-->
+                <configuration>
+                    <mainClass>com.cat.little.Application</mainClass>
+                </configuration>
+            </plugin>
             <plugin>
                 <!-- docker的maven插件，官网: https://github.com/spotify/docker‐maven‐plugin-->
                 <groupId>com.spotify</groupId>
